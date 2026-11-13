@@ -1,0 +1,16 @@
+{
+  "name": "Monitoring JIAT Jabar Indramayu",
+  "short_name": "JIAT Monitor",
+  "description": "Monitoring PEMBANGUNAN JIAT JABAR INDRAMAYU: laporan harian, kurva-S, alat & SDM, inspeksi, surat.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f3f6fb",
+  "theme_color": "#1557d6",
+  "lang": "id",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
