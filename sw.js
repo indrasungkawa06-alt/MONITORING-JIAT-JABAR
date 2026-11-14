@@ -1,5 +1,5 @@
 /* Service worker: aplikasi tetap terbuka saat sinyal lemah (data terakhir dari cache). */
-const CACHE = 'jiat-v3.0';
+const CACHE = 'jiat-v3.1';
 const SHELL = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
@@ -14,7 +14,7 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET') return;                       // API (POST) tidak di-cache
   const url = new URL(req.url);
-  if (url.hostname.includes('script.google') || url.hostname.includes('googleusercontent') || url.hostname.includes('drive.google')) return;
+  if (url.hostname.includes('script.google') || url.hostname.includes('googleusercontent') || url.hostname.includes('drive.google') || url.hostname.includes('openstreetmap') || url.hostname.includes('arcgisonline')) return;   // ubin peta tidak di-cache
   if (req.mode === 'navigate' || url.origin === location.origin) {
     // Network-first untuk file aplikasi agar selalu versi terbaru
     e.respondWith(fetch(req).then(res => {
