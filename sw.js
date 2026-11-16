@@ -1,5 +1,5 @@
 /* Service worker: aplikasi tetap terbuka saat sinyal lemah (data terakhir dari cache). */
-const CACHE = 'jiat-v3.1';
+const CACHE = 'jiat-v3.5';
 const SHELL = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
